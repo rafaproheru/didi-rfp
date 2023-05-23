@@ -1,0 +1,76 @@
+
+/* Aspira Light */
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/aspira-light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Aspira Regular */
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/aspira-regular.otf");
+  font-weight: 400;
+  font-style: regular;
+}
+
+/* Aspira Medium */
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/aspira-medium.otf");
+  font-weight: 500;
+  font-style: medium;
+}
+
+/* Aspira Semi */
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/aspira-demi.otf");
+  font-weight: 600;
+  font-style: semibold;
+}
+
+/* Aspira Bold */
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/aspira-bold.otf");
+  font-weight: 700;
+  font-style: bold;
+}
+
+/* Aspira Black */
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/aspira-black.otf");
+  font-weight: 800;
+  font-style: black;
+}
+
+/* Aspira Heavy */
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/aspira-heavy.otf");
+  font-weight: 900;
+  font-style: heavy;
+}
+
+
+
+:root {
+  --orange-300: #ff7d41;
+
+  --neutral-100: #f7f7f7;
+  --neutral-200: #f0f2f5;
+  --neutral-300: #eeeeee;
+
+  --font-100: #757575;
+}
+
+* {
+  font-family: "Aspira", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
