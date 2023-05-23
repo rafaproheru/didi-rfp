@@ -44,10 +44,11 @@ const FormWrapper = styled.div`
   min-width: 460px;
   background-color: #fff;
   border-radius: 8px;
-  padding: 64px;
+  padding: 64px 48px;
   display: flex;
   flex-direction: column;
   gap: 26px;
+  margin-top: -32px;
   & > h1 {
     font-size: 24px;
     font-weight: 600;
@@ -89,10 +90,10 @@ const StyledButton = styled.div`
 `;
 
 const BottomHeru = styled.div`
-    position: absolute;
-    bottom: 32px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: var(--font-100);
-`
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--font-100);
+`;
