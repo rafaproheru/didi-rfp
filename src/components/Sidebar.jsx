@@ -44,6 +44,20 @@ const Sidebar = () => {
           </Category>
         </Categories>
       </Top>
+      <Bottom>
+        <Category>
+          <span>
+            <img src={userIcon} alt="icon" />
+            Ajustes
+          </span>
+          <img src={arrowRightGrayIcon} alt="icon" />
+        </Category>
+        <Admin>
+            <div>CC</div>
+            <div className="name">Admin <span>Cecilia Castro</span></div>
+            <img src={dotsIcon} alt="icon" />
+        </Admin>
+      </Bottom>
     </Container>
   );
 };
@@ -56,6 +70,9 @@ const Container = styled.div`
   position: sticky;
   top: 60px;
   border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Top = styled.div`
@@ -66,6 +83,14 @@ const Top = styled.div`
   & > h4 {
     color: var(--font-100);
   }
+`;
+
+const Bottom = styled.div`
+  padding: 24px 20px 46px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid var(--neutral-200);
 `;
 
 const Categories = styled.div`
@@ -96,3 +121,37 @@ const Category = styled.div`
     gap: 8px;
   }
 `;
+
+const Admin = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--neutral-200);
+    padding: 8px 16px;
+    border-radius: 10px;
+    & > div:first-child {
+        background-color: #AFAEB1;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--neutral-100);
+    }
+    & > .name {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        color: var(--font-100);
+        & > span {
+            font-size: 15px;
+            font-weight: 600;
+            color: #000;
+            margin-right: 14px;
+        }
+    }
+
+`
