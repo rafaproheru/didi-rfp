@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import BannerDidi from "../components/BannerDidi";
 import eyeIcon from "../assets/eye-gray.svg";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -21,7 +22,7 @@ const Login = () => {
               <img src={eyeIcon} alt="eye" />
             </div>
           </Inputs>
-          <StyledButton>Ingresar</StyledButton>
+          <StyledButton to="/home">Ingresar</StyledButton>
         </FormWrapper>
         <BottomHeru>Powered by Heru</BottomHeru>
       </Container>
@@ -78,15 +79,16 @@ const Inputs = styled.div`
   }
 `;
 
-const StyledButton = styled.div`
+const StyledButton = styled(Link)`
   cursor: pointer;
   width: 100%;
   background-color: var(--orange-300);
-  font-weight: 600;
   padding: 12px 0;
   border-radius: 8px;
   text-align: center;
   color: #fff;
+  font-weight: 600;
+  text-decoration: none;
 `;
 
 const BottomHeru = styled.div`

@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import didiLogo from "../assets/didi-logo.svg";
 import ArrowRight from "../assets/arrow-right-white.svg";
+import { Link } from "react-router-dom";
 
 const BannerDidi = ({ login = false }) => {
   return (
@@ -8,7 +9,7 @@ const BannerDidi = ({ login = false }) => {
       <img src={didiLogo} alt="didi-logo" />
       {!login && (
         <Logout>
-          Cerrar Sesión
+          <Link to="/">Cerrar Sesión</Link>
           <img src={ArrowRight} alt="didi-logo" />
         </Logout>
       )}
@@ -24,6 +25,8 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 12px 32px;
   color: #fff;
+  position: sticky;
+  top: 0;
 `;
 
 const Logout = styled.div`
@@ -31,4 +34,9 @@ const Logout = styled.div`
   gap: 12px;
   align-items: center;
   font-weight: 500;
+  & > a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+  }
 `;
