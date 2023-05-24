@@ -9,95 +9,23 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Link, useNavigate } from "react-router-dom";
 
-function createData(rfc, name, id, state, address, period, date) {
-  return { rfc, name, id, state, address, period, date };
+function createData(date, emisor, period, id, gob, ret, pen) {
+  return { date, emisor, period, id, gob, ret, pen };
 }
 
 const rows = [
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
-  createData(
-    "CACJ980423MA5",
-    "Jorge Alberto Calata Castillo",
-    32321,
-    "Jalisco",
-    "Naranjo 1126",
-    10,
-    "2022-11-02"
-  ),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
+  createData("20-02-2023", "DiDi Food", 12, 23423, 0, "$323.03", "No"),
 ];
 
-const TableConsultant = () => {
+const TableDetailUser = () => {
   const navigate = useNavigate();
 
   return (
@@ -106,12 +34,13 @@ const TableConsultant = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Nombre</TableCell>
+              <TableCell>Emisión</TableCell>
+              <TableCell>Emisor</TableCell>
+              <TableCell align="left">Periodo</TableCell>
               <TableCell align="left">ID</TableCell>
-              <TableCell align="left">Estado</TableCell>
-              <TableCell align="left">Dirección</TableCell>
-              <TableCell align="left">Periodo </TableCell>
-              <TableCell align="left">Emisión </TableCell>
+              <TableCell align="left">Imp. Gub</TableCell>
+              <TableCell align="left">Total Retenido </TableCell>
+              <TableCell align="left">Penalizado </TableCell>
               <TableCell
                 align="left"
                 sx={{ display: "flex", gap: 2, alignItems: "center" }}
@@ -123,28 +52,15 @@ const TableConsultant = () => {
           <TableBody>
             {rows.map((row) => (
               <TableRow
-                key={row.name}
+                key={row.date}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell
-                  sx={{ display: "flex", flexDirection: "column" }}
-                  component="th"
-                  scope="row"
-                >
-                  <b style={{ fontWeight: 600 }}>{row.rfc}</b>
-                  <span style={{ color: "var(--font-100)" }}>{row.name}</span>
+                <TableCell component="th" scope="row">
+                  {row.date}
                 </TableCell>
                 <TableCell align="left">
                   {" "}
-                  <b> {row.id}</b>
-                </TableCell>
-                <TableCell align="left">
-                  {" "}
-                  <b> {row.state}</b>
-                </TableCell>
-                <TableCell align="left">
-                  {" "}
-                  <b> {row.address}</b>
+                  <b> {row.emisor}</b>
                 </TableCell>
                 <TableCell align="left">
                   {" "}
@@ -152,7 +68,19 @@ const TableConsultant = () => {
                 </TableCell>
                 <TableCell align="left">
                   {" "}
-                  <b> {row.date}</b>
+                  <b> {row.id}</b>
+                </TableCell>
+                <TableCell align="left">
+                  {" "}
+                  <b> {row.gob}</b>
+                </TableCell>
+                <TableCell align="left">
+                  {" "}
+                  <b> {row.ret}</b>
+                </TableCell>
+                <TableCell align="left">
+                  {" "}
+                  <b> {row.pen}</b>
                 </TableCell>
                 <TableCell
                   align="left"
@@ -172,13 +100,12 @@ const TableConsultant = () => {
   );
 };
 
-export default TableConsultant;
+export default TableDetailUser;
 
 const Container = styled.div`
   cursor: pointer;
   position: relative;
   font-size: 14px;
-  padding: 12px;
   & > .divider {
     width: 97%;
     margin: 0 auto;

@@ -4,6 +4,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./pages/Login.jsx";
 import Consulta from "./pages/Consulta.jsx";
+import DetailUser from "./pages/DetailUser";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/permisos",
     element: <Consulta />,
+  },
+  {
+    path: "/detail-user",
+    element: <DetailUser />,
   },
 ]);
 
