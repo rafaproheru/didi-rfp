@@ -70,7 +70,7 @@ const Sidebar = () => {
 export default Sidebar;
 
 const Container = styled.div`
-  width: 280px;
+  min-width: 250px;
   height: calc(100vh - 60px);
   position: sticky;
   border-right: 1px solid #e5e5e5;

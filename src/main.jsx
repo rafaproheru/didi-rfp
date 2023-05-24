@@ -9,6 +9,7 @@ import GenerateCertificates from "./pages/GenerateCertificates";
 import Admin from "./pages/Admin";
 import Reportes from "./pages/Reportes";
 import ReportDetail from "./pages/ReportDetail";
+import Stadistics from "./pages/Stadistics";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/estadisticas", 
-    element: <Consulta />,  
+    element: <Stadistics />,  
   },
   {
     path: "/reportes",

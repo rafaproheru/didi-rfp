@@ -55,17 +55,17 @@ const ReportDetail = () => {
     <Layout>
       <Container>
         <Header>
-          <SectionName>
+          <SectionName onClick={() => navigate("/reportes")}>
             <img
               src={downIcon}
               alt="icon"
               style={{ transform: "rotate(90deg)" }}
             />
-            <span onClick={() => navigate("/reportes")}>Regresar</span>
+            <span>Regresar</span>
             <DividerVertical />
             <span>Reporte de certificados</span>
             <DividerVertical />
-            Mayo 2023
+            Diciembre 2022
           </SectionName>
           <Filters>
             <div>
