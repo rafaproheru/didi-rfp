@@ -50,7 +50,7 @@ export const LineChartComponent = ({ title = "" }) => (
       className="mt-6"
       data={chartdata}
       index="year"
-      categories={["Todos", "DiDi Rides", "DiDi Foods"]}
+      categories={["Todos", "DiDi Foods", "DiDi Rides"]}
       colors={["orange", "amber", "slate"]}
       valueFormatter={dataFormatter}
       yAxisWidth={40}

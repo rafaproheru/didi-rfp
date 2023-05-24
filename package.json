@@ -14,6 +14,7 @@
     "@mui/material": "^5.13.2",
     "@mui/styled-engine-sc": "^5.12.0",
     "@tremor/react": "^2.8.2",
+    "@uiball/loaders": "^1.2.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",

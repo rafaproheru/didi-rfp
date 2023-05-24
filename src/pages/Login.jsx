@@ -3,6 +3,7 @@ import BannerDidi from "../components/BannerDidi";
 import eyeIcon from "../assets/eye-gray.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Orbit, Ring } from "@uiball/loaders";
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,20 +26,22 @@ const Login = () => {
           </h1>
           <Inputs>
             <div>
-              <input placeholder="Ingresa tu correo electrónico" />
+              <input
+                placeholder="Ingresa tu correo electrónico"
+                value={"cecilia@email.com"}
+              />
             </div>
             <div>
-              <input placeholder="Ingresa tu contraseña" />
+              <input
+                placeholder="Ingresa tu contraseña"
+                value={"mypassword123"}
+              />
               <img src={eyeIcon} alt="eye" />
             </div>
           </Inputs>
           <StyledButton onClick={() => handleLogin()}>
             {isLoading ? (
-              <div className="w-4 m-auto prevent-select">
-                <svg className="ring" viewBox="25 25 50 50" stroke-width="7">
-                  <circle cx="50" cy="50" r="20" />
-                </svg>
-              </div>
+              <Ring size={20} lineWeight={7} speed={2} color="white" />
             ) : (
               "Ingresar"
             )}
@@ -56,13 +59,13 @@ const Container = styled.div`
   width: 100%;
   background-color: var(--neutral-200);
   height: calc(100vh);
-  display: grid;
-  place-content: center;
+  padding: 264px 20px 0 20px;
 `;
 
 const FormWrapper = styled.div`
   width: 100%;
-  min-width: 460px;
+  max-width: 400px;
+  margin: 0 auto;
   background-color: #fff;
   border-radius: 8px;
   padding: 64px 48px;
@@ -109,6 +112,14 @@ const StyledButton = styled(Link)`
   color: #fff;
   font-weight: 600;
   text-decoration: none;
+  transition: 0.3s;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    transform: scale(0.98);
+  }
 `;
 
 const BottomHeru = styled.div`

@@ -119,7 +119,7 @@ const TableWrapper = styled.div`
   margin: 16px;
   padding: 24px;
   position: relative;
-  height: 716px;
+  height: 616px;
 `;
 
 const HeaderTable = styled.div`
