@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Aspira Light */
 @font-face {
@@ -55,8 +58,6 @@
   font-style: heavy;
 }
 
-
-
 :root {
   --orange-300: #ff7d41;
 
@@ -75,14 +76,21 @@
   font-weight: normal;
 }
 
+
 .divider {
   width: 100%;
   height: 1px;
   background-color: var(--neutral-300);
 }
 
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 body::-webkit-scrollbar {
-  width: .5em;
+  width: 0.5em;
 }
 
 body::-webkit-scrollbar-track {
@@ -98,7 +106,7 @@ body::-webkit-scrollbar-thumb {
   --uib-size: 16px;
   --uib-speed: 2s;
   --uib-color: #fff;
-  
+
   height: var(--uib-size);
   width: var(--uib-size);
   vertical-align: middle;

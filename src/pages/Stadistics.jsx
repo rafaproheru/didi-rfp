@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 import Layout from "../components/Layout";
 import notificationIcon from "../assets/notification.svg";
+import { BarChartComponent } from "../components/stadistics/BarChartComponent";
+import { LineChartComponent } from "../components/stadistics/LineChartComponent";
 
 const Stadistics = () => {
   return (
@@ -15,6 +17,13 @@ const Stadistics = () => {
           </div>
           <img src={notificationIcon} alt="icon" />
         </Header>
+        <ChartsWrapper>
+          <BarChartComponent />
+          <Bottom>
+            <LineChartComponent title="Con impuesto gubernamental"/>
+            <LineChartComponent title="Con penalización"/>
+          </Bottom>
+        </ChartsWrapper>
       </Container>
     </Layout>
   );
@@ -37,9 +46,21 @@ const Header = styled.div`
     font-size: 20px;
     font-weight: 300;
     color: #000;
-    margin-bottom: 4px;
     b {
-        font-weight: 700;
+      font-weight: 700;
     }
   }
+`;
+
+const ChartsWrapper = styled.div`
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1660px;
+`;
+
+const Bottom = styled.div`
+    display: flex;
+    gap: 16px;
 `;

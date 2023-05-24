@@ -34,9 +34,11 @@ const Login = () => {
           </Inputs>
           <StyledButton onClick={() => handleLogin()}>
             {isLoading ? (
-              <svg class="ring" viewBox="25 25 50 50" stroke-width="7">
-                <circle cx="50" cy="50" r="20" />
-              </svg>
+              <div className="w-4 m-auto prevent-select">
+                <svg className="ring" viewBox="25 25 50 50" stroke-width="7">
+                  <circle cx="50" cy="50" r="20" />
+                </svg>
+              </div>
             ) : (
               "Ingresar"
             )}
@@ -53,7 +55,7 @@ export default Login;
 const Container = styled.div`
   width: 100%;
   background-color: var(--neutral-200);
-  height: calc(100vh - 60px);
+  height: calc(100vh);
   display: grid;
   place-content: center;
 `;

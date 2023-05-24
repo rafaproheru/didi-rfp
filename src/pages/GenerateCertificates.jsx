@@ -149,6 +149,7 @@ const UploadFiles = styled.div`
   background-color: #fff;
   padding: 20px 32px;
   border-radius: 8px;
+  min-width: 400px;
   & > input {
     width: 100%;
     height: 40px;
@@ -226,6 +227,7 @@ const Historial = styled.div`
   background-color: #fff;
   padding: 20px 16px;
   border-radius: 8px;
+  width: 100%;
   b {
     font-weight: 500;
   }

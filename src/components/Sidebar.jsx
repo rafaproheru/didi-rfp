@@ -72,12 +72,14 @@ export default Sidebar;
 const Container = styled.div`
   min-width: 250px;
   height: calc(100vh - 60px);
-  position: sticky;
+  position: fixed;
   border-right: 1px solid #e5e5e5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: #fff;
+  top: 60px;
+  z-index: 50;
 `;
 
 const Top = styled.div`

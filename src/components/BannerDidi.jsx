@@ -25,8 +25,10 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 12px 32px;
   color: #fff;
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 100;
+  width: 100%;
 `;
 
 const Logout = styled.div`

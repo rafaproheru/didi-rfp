@@ -86,7 +86,7 @@ const SectionName = styled.div`
     height: 2px;
     background-color: var(--orange-300);
     position: absolute;
-    bottom: -21px;
+    bottom: -24px;
     border-radius: 12px;
   }
 `;

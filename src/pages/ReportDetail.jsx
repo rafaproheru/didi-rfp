@@ -264,7 +264,7 @@ const Validation = styled.div`
   & > h6 {
     font-weight: 500;
     font-size: 16px;
-    padding: 12px 12px 24px 12px;
+    padding: 12px 12px 16px 12px;
   }
 `;
 
@@ -273,6 +273,7 @@ const Observations = styled.div`
   background-color: #fff;
   padding: 16px;
   border-radius: 8px;
+  font-size: 14px;
   & > span {
     display: flex;
     align-items: center;

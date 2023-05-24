@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <BannerDidi />
       <ContentWrapper>
         <Sidebar />
-        {children}
+        <div className="ml-[250px] mt-[56px] w-[100%] sm:min-w-0">{children}</div>
       </ContentWrapper>
     </Container>
   );
@@ -16,7 +16,10 @@ const Layout = ({ children }) => {
 
 export default Layout;
 
-const Container = styled.div``;
+const Container = styled.div`
+  background-color: var(--neutral-200);
+  height: 100vh;
+`;
 
 const ContentWrapper = styled.div`
   display: flex;

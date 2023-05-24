@@ -103,7 +103,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 32px;
+  padding: 20px 32px;
 `;
 
 const Left = styled.div`
@@ -113,7 +113,6 @@ const Left = styled.div`
   & > h2 {
     font-size: 32px;
     font-weight: 700;
-    margin: 6px 0;
   }
 `;
 
