@@ -1,8 +1,5 @@
 import { styled } from "styled-components";
 import downloadBlackIcon from "../../assets/download-black.svg";
-import consultTableData from "../../shared/constants";
-
-import * as React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -10,7 +7,6 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { TablePagination } from "@mui/material";
 
 function createData(rfc, name, id, state, address, period, date) {
   return { rfc, name, id, state, address, period, date };
@@ -126,11 +122,26 @@ const TableConsultant = () => {
                   <b style={{ fontWeight: 600 }}>{row.rfc}</b>
                   <span style={{ color: "var(--font-100)" }}>{row.name}</span>
                 </TableCell>
-                <TableCell align="left"> <b> {row.id}</b></TableCell>
-                <TableCell align="left"> <b> {row.state}</b></TableCell>
-                <TableCell align="left"> <b> {row.address}</b></TableCell>
-                <TableCell align="left"> <b> {row.period}</b></TableCell>
-                <TableCell align="left"> <b> {row.date}</b></TableCell>
+                <TableCell align="left">
+                  {" "}
+                  <b> {row.id}</b>
+                </TableCell>
+                <TableCell align="left">
+                  {" "}
+                  <b> {row.state}</b>
+                </TableCell>
+                <TableCell align="left">
+                  {" "}
+                  <b> {row.address}</b>
+                </TableCell>
+                <TableCell align="left">
+                  {" "}
+                  <b> {row.period}</b>
+                </TableCell>
+                <TableCell align="left">
+                  {" "}
+                  <b> {row.date}</b>
+                </TableCell>
                 <TableCell
                   align="left"
                   sx={{

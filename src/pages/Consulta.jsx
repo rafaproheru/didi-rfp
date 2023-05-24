@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 import Layout from "../components/Layout";
 import fileIcon from "../assets/file-black.svg";
-import calendarIcon from "../assets/calendar-black.svg";
 import downIcon from "../assets/down-black.svg";
 import downGrayIcon from "../assets/down-gray.svg";
 import downloadIcon from "../assets/download-white.svg";
