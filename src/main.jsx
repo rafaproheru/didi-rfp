@@ -7,6 +7,8 @@ import Consulta from "./pages/Consulta.jsx";
 import DetailUser from "./pages/DetailUser";
 import GenerateCertificates from "./pages/GenerateCertificates";
 import Admin from "./pages/Admin";
+import Reportes from "./pages/Reportes";
+import ReportDetail from "./pages/ReportDetail";
 
 const router = createBrowserRouter([
   {
@@ -18,12 +20,12 @@ const router = createBrowserRouter([
     element: <Consulta />,
   },
   {
-    path: "/estadisticas",
-    element: <Consulta />,
+    path: "/estadisticas", 
+    element: <Consulta />,  
   },
   {
     path: "/reportes",
-    element: <Consulta />,
+    element: <Reportes />,
   },
   {
     path: "/generar-certificados",
@@ -36,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/detail-user",
     element: <DetailUser />,
+  },
+  {
+    path: "/report-detail",
+    element: <ReportDetail />,
   },
   {
     path: "/admin",
