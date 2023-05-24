@@ -7,6 +7,7 @@ import userIcon from "../assets/user.svg";
 import dotsIcon from "../assets/dots.svg";
 import arrowRightIcon from "../assets/right-black.svg";
 import arrowRightGrayIcon from "../assets/right-gray.svg";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -14,28 +15,28 @@ const Sidebar = () => {
       <Top>
         <h4>Páginas</h4>
         <Categories>
-          <Category>
+          <Category to="/consulta">
             <span>
               <img src={consultIcon} alt="icon" />
               <b>Consulta</b>
             </span>
             <img src={arrowRightIcon} alt="icon" />
           </Category>
-          <Category>
+          <Category to="/estadisticas">
             <span>
               <img src={staticsIcon} alt="icon" />
               Estadísticas
             </span>
             <img src={arrowRightGrayIcon} alt="icon" />
           </Category>
-          <Category>
+          <Category to="/reportes">
             <span>
               <img src={fileIcon} alt="icon" />
               Reportes
             </span>
             <img src={arrowRightGrayIcon} alt="icon" />
           </Category>
-          <Category>
+          <Category to="/generar-certificados">
             <span>
               <img src={fileSettingsIcon} alt="icon" />
               Generar certificados
@@ -45,7 +46,7 @@ const Sidebar = () => {
         </Categories>
       </Top>
       <Bottom>
-        <Category>
+        <Category to="/permisos">
           <span>
             <img src={userIcon} alt="icon" />
             Ajustes
@@ -53,9 +54,11 @@ const Sidebar = () => {
           <img src={arrowRightGrayIcon} alt="icon" />
         </Category>
         <Admin>
-            <div>CC</div>
-            <div className="name">Admin <span>Cecilia Castro</span></div>
-            <img src={dotsIcon} alt="icon" />
+          <div>CC</div>
+          <div className="name">
+            Admin <span>Cecilia Castro</span>
+          </div>
+          <img src={dotsIcon} alt="icon" />
         </Admin>
       </Bottom>
     </Container>
@@ -65,14 +68,14 @@ const Sidebar = () => {
 export default Sidebar;
 
 const Container = styled.div`
-  width: 250px;
+  width: 280px;
   height: calc(100vh - 60px);
   position: sticky;
-  top: 60px;
   border-right: 1px solid #e5e5e5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: #fff;
 `;
 
 const Top = styled.div`
@@ -99,12 +102,12 @@ const Categories = styled.div`
   gap: 20px;
 `;
 
-const Category = styled.div`
+const Category = styled(Link)`
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--font-100);
-
+  text-decoration: none;
   & > span > img {
     width: 16px;
     height: 16px;
@@ -123,35 +126,34 @@ const Category = styled.div`
 `;
 
 const Admin = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--neutral-200);
+  padding: 8px 16px;
+  border-radius: 10px;
+  & > div:first-child {
+    background-color: #afaeb1;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 16px;
-    background-color: var(--neutral-200);
-    padding: 8px 16px;
-    border-radius: 10px;
-    & > div:first-child {
-        background-color: #AFAEB1;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px;
-        font-weight: 600;
-        color: var(--neutral-100);
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--neutral-100);
+  }
+  & > .name {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: var(--font-100);
+    & > span {
+      font-size: 15px;
+      font-weight: 600;
+      color: #000;
+      margin-right: 14px;
     }
-    & > .name {
-        display: flex;
-        flex-direction: column;
-        font-size: 12px;
-        color: var(--font-100);
-        & > span {
-            font-size: 15px;
-            font-weight: 600;
-            color: #000;
-            margin-right: 14px;
-        }
-    }
-
-`
+  }
+`;

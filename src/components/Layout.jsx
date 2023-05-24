@@ -20,4 +20,5 @@ const Container = styled.div``;
 
 const ContentWrapper = styled.div`
   display: flex;
+  background-color: var(--neutral-200);
 `;

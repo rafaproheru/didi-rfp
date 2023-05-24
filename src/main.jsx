@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./pages/App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./pages/Login.jsx";
+import Consulta from "./pages/Consulta.jsx";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +11,24 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/home",
-    element: <App />,
+    path: "/consulta",
+    element: <Consulta />,
+  },
+  {
+    path: "/estadisticas",
+    element: <Consulta />,
+  },
+  {
+    path: "/reportes",
+    element: <Consulta />,
+  },
+  {
+    path: "/generar-certificados",
+    element: <Consulta />,
+  },
+  {
+    path: "/permisos",
+    element: <Consulta />,
   },
 ]);
 

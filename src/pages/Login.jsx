@@ -1,9 +1,20 @@
 import { styled } from "styled-components";
 import BannerDidi from "../components/BannerDidi";
 import eyeIcon from "../assets/eye-gray.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  function handleLogin() {
+    setIsLoading(true);
+    setTimeout(() => {
+      navigate("/consulta");
+    }, 800);
+  }
+
   return (
     <>
       <BannerDidi login />
@@ -16,13 +27,20 @@ const Login = () => {
             <div>
               <input placeholder="Ingresa tu correo electrónico" />
             </div>
-
             <div>
               <input placeholder="Ingresa tu contraseña" />
               <img src={eyeIcon} alt="eye" />
             </div>
           </Inputs>
-          <StyledButton to="/home">Ingresar</StyledButton>
+          <StyledButton onClick={() => handleLogin()}>
+            {isLoading ? (
+              <svg class="ring" viewBox="25 25 50 50" stroke-width="7">
+                <circle cx="50" cy="50" r="20" />
+              </svg>
+            ) : (
+              "Ingresar"
+            )}
+          </StyledButton>
         </FormWrapper>
         <BottomHeru>Powered by Heru</BottomHeru>
       </Container>
