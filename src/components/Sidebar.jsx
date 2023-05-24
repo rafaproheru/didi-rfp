@@ -7,9 +7,11 @@ import userIcon from "../assets/user.svg";
 import dotsIcon from "../assets/dots.svg";
 import arrowRightIcon from "../assets/right-black.svg";
 import arrowRightGrayIcon from "../assets/right-gray.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  
   return (
     <Container>
       <Top>
@@ -45,7 +47,7 @@ const Sidebar = () => {
           </Category>
         </Categories>
       </Top>
-      <Bottom>
+      <Bottom onClick={() => navigate("/admin")}>
         <Category to="/permisos">
           <span>
             <img src={userIcon} alt="icon" />
@@ -53,7 +55,7 @@ const Sidebar = () => {
           </span>
           <img src={arrowRightGrayIcon} alt="icon" />
         </Category>
-        <Admin>
+        <Admin > 
           <div>CC</div>
           <div className="name">
             Admin <span>Cecilia Castro</span>
@@ -126,6 +128,7 @@ const Category = styled(Link)`
 `;
 
 const Admin = styled.div`
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 16px;

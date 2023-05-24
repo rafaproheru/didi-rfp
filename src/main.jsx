@@ -5,6 +5,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./pages/Login.jsx";
 import Consulta from "./pages/Consulta.jsx";
 import DetailUser from "./pages/DetailUser";
+import GenerateCertificates from "./pages/GenerateCertificates";
+import Admin from "./pages/Admin";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/generar-certificados",
-    element: <Consulta />,
+    element: <GenerateCertificates />,
   },
   {
     path: "/permisos",
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/detail-user",
     element: <DetailUser />,
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
   },
 ]);
 
