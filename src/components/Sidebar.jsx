@@ -91,6 +91,9 @@ const Container = styled.div`
   background: #fff;
   top: 60px;
   z-index: 50;
+  @media (max-width: 1028px) {
+    display: none;
+  }
 `;
 
 const Top = styled.div`

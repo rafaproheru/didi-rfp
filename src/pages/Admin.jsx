@@ -127,6 +127,7 @@ const HeaderTable = styled.div`
     font-weight: 500;
     padding: 24px 16px 0 24px;
   }
+  
 `;
 
 const ByHeru = styled.div`
@@ -168,30 +169,25 @@ const Workspace = styled.div`
     font-weight: 600;
     margin-right: 24px;
   }
+  @media (max-width: 1028px) {
+    display: block;
+  }
 `;
 
 const VerticalDivider = styled.div`
   width: 2px;
   height: 24px;
   background-color: #eaeaea;
+  @media (max-width: 1028px) {
+    height: 0;
+  }
 `;
 
 const Buttons = styled.div`
   display: flex;
   gap: 16px;
   padding: 24px 24px;
-`;
-
-const ButtonIcon = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--neutral-200);
-  padding: 8px 16px;
-  border-radius: 8px;
-  & > span {
-    font-weight: 500;
-    font-size: 14px;
-    margin-right: 16px;
+  @media (max-width: 1028px) {
+    flex-direction: column;
   }
 `;

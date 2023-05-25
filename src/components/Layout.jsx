@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <BannerDidi />
       <ContentWrapper>
         <Sidebar />
-        <div className="ml-[250px] mt-[56px] w-[100%] sm:min-w-0">{children}</div>
+        <Content className="ml-[250px] mt-[56px] w-[100%] sm:min-w-0">{children}</Content>
       </ContentWrapper>
     </Container>
   );
@@ -25,3 +25,9 @@ const ContentWrapper = styled.div`
   display: flex;
   background-color: var(--neutral-200);
 `;
+
+const Content = styled.div`
+  @media (max-width: 1028px) {
+    margin: 56px 0;
+  }
+`

@@ -108,14 +108,19 @@ const UserInfo = styled.div`
       font-weight: 500;
     }
   }
+  @media (max-width: 1028px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+  }
 `;
 
 const TableWrapper = styled.div`
   background-color: #fff;
   margin: 16px;
-  padding: 24px;
+  padding: 24px 24px 0px 24px;
   position: relative;
-  height: 616px;
+  border-radius: 8px;
 `;
 
 const HeaderTable = styled.div`
@@ -131,30 +136,10 @@ const HeaderTable = styled.div`
   }
 `;
 
-const FilterAll = styled.div`
-  display: flex;
-  background-color: var(--neutral-100);
-  padding-right: 16px;
-  border-radius: 8px;
-  & > span {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 6px 18px;
-    color: #fff;
-    border-radius: 8px;
-    font-weight: 600;
-    background-color: var(--orange-300);
-    margin-right: 14px;
-  }
-`;
-
 const ByHeru = styled.div`
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
   color: var(--font-100);
   font-size: 14px;
+  padding: 16px 0;
   & > span {
     text-decoration: underline;
   }

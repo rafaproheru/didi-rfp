@@ -143,6 +143,9 @@ const ContentWrapper = styled.div`
   margin: 16px;
   display: flex;
   gap: 16px;
+  @media (max-width: 1028px) {
+    flex-direction: column;
+  }
 `;
 
 const UploadFiles = styled.div`
@@ -169,6 +172,9 @@ const UploadFiles = styled.div`
     margin-top: 8px;
     padding: 16px;
     color: #636363;
+  }
+  @media (max-width: 1028px) {
+    min-width: 0;
   }
 `;
 

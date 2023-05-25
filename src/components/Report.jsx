@@ -88,7 +88,6 @@ const Container = styled.div`
   background-color: #ffffff;
   border-radius: 8px;
   cursor: pointer;
-
   b {
     color: #000;
     font-weight: 600;
@@ -104,6 +103,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 32px;
+  @media (max-width: 1028px) {
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
@@ -149,6 +151,10 @@ const Case = styled.div`
     color: #000;
     width: 150px;
   }
+  @media (max-width: 1028px) {
+    flex-direction: column;
+    align-items: start;
+  }
 `;
 
 const DownloadButton = styled.button`
@@ -169,6 +175,11 @@ const Right = styled.div`
   align-items: end;
   flex: 1;
   gap: 80px;
+  @media (max-width: 1028px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+  }
 `;
 
 const Stadistic = styled.div`

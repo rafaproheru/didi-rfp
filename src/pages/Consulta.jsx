@@ -90,36 +90,17 @@ const Filters = styled.div`
     align-items: center;
     gap: 16px;
   }
-`;
-
-const Filter = styled.div`
-  display: flex;
-  align-items: center;
-  background-color: var(--neutral-100);
-  padding: 8px 16px;
-  gap: 12px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 14px;
-  & > img {
-    width: 12px;
-  }
-`;
-
-const FilterAll = styled.div`
-  display: flex;
-  background-color: var(--neutral-100);
-  padding-right: 16px;
-  border-radius: 8px;
-  & > span {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 6px 18px;
-    color: #fff;
-    border-radius: 8px;
-    font-weight: 600;
-    background-color: var(--orange-300);
+  @media (max-width: 1028px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      width: 100%;
+    }
   }
 `;
 
@@ -127,7 +108,6 @@ const TableWrapper = styled.div`
   border-radius: 8px;
   background-color: #fff;
   margin: 14px;
-  height: 780px;
   position: relative;
 `;
 
@@ -143,6 +123,11 @@ const HeaderTable = styled.div`
   & > span > b {
     font-weight: 600;
     color: var(--orange-300);
+  }
+  @media (max-width: 1028px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 `;
 
@@ -168,12 +153,15 @@ const Searchbar = styled.div`
     font-size: 15px;
     min-width: 250px;
   }
+  @media (max-width: 1028px) {
+    & > input {
+      min-width: 0;
+    }
+  }
 `;
 
 const ByHeru = styled.div`
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
+  padding: 8px 16px;
   color: var(--font-100);
   font-size: 14px;
   & > span {

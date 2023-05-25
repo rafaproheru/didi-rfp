@@ -63,4 +63,7 @@ const ChartsWrapper = styled.div`
 const Bottom = styled.div`
     display: flex;
     gap: 16px;
+    @media (max-width: 1028px) {
+        flex-direction: column;
+    }
 `;

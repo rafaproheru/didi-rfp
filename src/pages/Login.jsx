@@ -58,6 +58,9 @@ const Container = styled.div`
   background-color: var(--neutral-200);
   height: calc(100vh);
   padding: 264px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const FormWrapper = styled.div`
@@ -74,6 +77,9 @@ const FormWrapper = styled.div`
   & > h1 {
     font-size: 24px;
     font-weight: 600;
+  }
+  @media (max-width: 1028px) {
+    padding: 32px 24px;
   }
 `;
 const Inputs = styled.div`
@@ -121,10 +127,8 @@ const StyledButton = styled(Link)`
 `;
 
 const BottomHeru = styled.div`
-  position: absolute;
-  bottom: 32px;
-  left: 0;
   width: 100%;
   text-align: center;
   color: var(--font-100);
+  padding: 32px 0;
 `;

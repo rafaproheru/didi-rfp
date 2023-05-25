@@ -88,7 +88,7 @@ const ReportDetail = () => {
             <Validation>
               <h6>Validación de RFC</h6>
               <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table sx={{ minWidth: 650 }} aria-label="simple table" className="rfc">
                   <TableHead>
                     <TableRow>
                       <TableCell>Número</TableCell>
@@ -165,6 +165,11 @@ export default ReportDetail;
 const Container = styled.div`
   width: 100%;
   background-color: var(--neutral-200);
+  @media (max-width: 1028px) {
+    .bottom {
+      flex-direction: column;
+    }
+  }
 `;
 
 const Header = styled.div`
@@ -197,39 +202,14 @@ const Filters = styled.div`
     align-items: center;
     gap: 16px;
   }
-`;
-
-const Filter = styled.div`
-  display: flex;
-  align-items: center;
-  background-color: var(--neutral-100);
-  padding: 8px 16px;
-  gap: 12px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 14px;
-  & > img {
-    width: 12px;
-  }
-  & > span {
-    margin-right: 64px;
-  }
-`;
-
-const FilterAll = styled.div`
-  display: flex;
-  background-color: var(--neutral-100);
-  padding-right: 16px;
-  border-radius: 8px;
-  & > span {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 6px 18px;
-    color: #fff;
-    border-radius: 8px;
-    font-weight: 600;
-    background-color: var(--orange-300);
+  @media (max-width: 1028px) {
+    flex-direction: column;
+    gap: 8px;
+    & > div {
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
+    }
   }
 `;
 
@@ -254,11 +234,15 @@ const Validation = styled.div`
   background-color: #fff;
   padding: 16px;
   border-radius: 8px;
-  flex: 1;
   & > h6 {
     font-weight: 500;
     font-size: 16px;
     padding: 12px 12px 16px 12px;
+  }
+  @media (max-width: 1028px) {
+    .rfc{
+      min-width: 0;
+    }
   }
 `;
 

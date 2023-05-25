@@ -71,6 +71,15 @@ const Filters = styled.div`
     align-items: center;
     gap: 16px;
   }
+  @media (max-width: 1028px) {
+    flex-direction: column;
+    gap: 8px;
+    & > div {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
 `;
 
 const ReportsWrapper = styled.div`
