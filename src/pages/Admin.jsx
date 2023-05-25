@@ -1,14 +1,11 @@
 import { styled } from "styled-components";
 import Layout from "../components/Layout";
-import downGrayIcon from "../assets/down-black.svg";
-import downloadIcon from "../assets/download-white.svg";
 import userIcon from "../assets/user-black.svg";
 import plusIcon from "../assets/square-plus.svg";
-import fileIcon from "../assets/file-black.svg";
 import securityIcon from "../assets/security.svg";
-import downIcon from "../assets/down-black.svg";
 import { useNavigate } from "react-router-dom";
 import TableAdmin from "../components/tables/TableAdmin";
+import ButtonFilter from "../components/ButtonFilter";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -16,7 +13,7 @@ const Admin = () => {
   return (
     <Layout>
       <Container>
-        <Header onClick={() => navigate("/consulta")}>
+        <Header>
           <SectionName>
             <div>
               <h4>Cecilia Castro</h4>
@@ -51,21 +48,15 @@ const Admin = () => {
           </Workspace>
           <div className="divider" />
           <Buttons>
-            <ButtonIcon>
-              <img src={plusIcon} alt="icon" />
-              <span>Agregar Usuarios</span>
-              <img src={downIcon} alt="icon" />
-            </ButtonIcon>
-            <ButtonIcon>
-              <img src={fileIcon} alt="icon" />
-              <span>Permisos</span>
-              <img src={downIcon} alt="icon" />
-            </ButtonIcon>
-            <ButtonIcon>
-              <img src={securityIcon} alt="icon" />
-              <span>Seguridad</span>
-              <img src={downIcon} alt="icon" />
-            </ButtonIcon>
+            <ButtonFilter
+              text="Agregar usuarios"
+              icon={<img src={plusIcon} alt="icon" />}
+            />
+            <ButtonFilter text="Permisos" />
+            <ButtonFilter
+              text="Seguridad"
+              icon={<img src={securityIcon} alt="icon" />}
+            />
           </Buttons>
         </AdminInfo>
         <TableWrapper>
@@ -91,7 +82,6 @@ const Container = styled.div`
 
 const Header = styled.div`
   background-color: #fff;
-  cursor: pointer;
 `;
 
 const SectionName = styled.div`

@@ -56,7 +56,7 @@ const TableAdmin = () => {
   const navigate = useNavigate();
 
   return (
-    <Container onClick={() => navigate("/detail-user")}>
+    <Container>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -115,7 +115,6 @@ const TableAdmin = () => {
 export default TableAdmin;
 
 const Container = styled.div`
-  cursor: pointer;
   position: relative;
   font-size: 14px;
   padding: 16px 16px 24px 16px;

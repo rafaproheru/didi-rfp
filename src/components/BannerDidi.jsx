@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 const BannerDidi = ({ login = false }) => {
   return (
     <Container>
-      <img src={didiLogo} alt="didi-logo" />
+      <Link to="/consulta">
+        <img src={didiLogo} alt="didi-logo" />
+      </Link>
       {!login && (
         <Logout>
           <Link to="/">Cerrar Sesión</Link>

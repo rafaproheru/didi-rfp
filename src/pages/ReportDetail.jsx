@@ -16,6 +16,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useNavigate } from "react-router-dom";
+import ButtonDownload from "../components/ButtonDownload";
+import ButtonFilter from "../components/ButtonFilter";
 
 function createData(number, rfc, result) {
   return { number, rfc, result };
@@ -69,23 +71,15 @@ const ReportDetail = () => {
           </SectionName>
           <Filters>
             <div>
-              <Filter>
-                <img src={fileIcon} alt="icon" />
-                Filtrar por emisor
-                <img src={downIcon} alt="icon" />
-              </Filter>
-              <Filter>
-                <img src={calendarIcon} alt="icon" />
-                Cambiar periodo
-                <img src={downIcon} alt="icon" />
-              </Filter>
+              <ButtonFilter text="Filtrar por emisor" />
+              <ButtonFilter
+                text="Cambiar periodo"
+                icon={<img src={calendarIcon} alt="icon" />}
+              />
             </div>
-            <FilterAll>
-              <span>
-                Descargar Reporte <img src={downloadIcon} alt="icon" />
-              </span>
-              <img src={downGrayIcon} alt="icon" />
-            </FilterAll>
+            <div>
+              <ButtonDownload title="Descargar reporte" />
+            </div>
           </Filters>
         </Header>
         <ReportsWrapper>

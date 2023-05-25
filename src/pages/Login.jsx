@@ -28,13 +28,11 @@ const Login = () => {
             <div>
               <input
                 placeholder="Ingresa tu correo electrónico"
-                value={"cecilia@email.com"}
               />
             </div>
             <div>
               <input
                 placeholder="Ingresa tu contraseña"
-                value={"mypassword123"}
               />
               <img src={eyeIcon} alt="eye" />
             </div>

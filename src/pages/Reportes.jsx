@@ -6,10 +6,10 @@ import downGrayIcon from "../assets/down-gray.svg";
 import downloadIcon from "../assets/download-white.svg";
 import calendarIcon from "../assets/calendar-black.svg";
 import Report from "../components/Report";
+import ButtonFilter from "../components/ButtonFilter";
+import ButtonDownload from "../components/ButtonDownload";
 
 const Reportes = () => {
-  
-  
   return (
     <Layout>
       <Container>
@@ -19,28 +19,16 @@ const Reportes = () => {
           </SectionName>
           <Filters>
             <div>
-              <Filter>
-                <img src={fileIcon} alt="icon" />
-                <span>Buscar</span>
-                <img src={downIcon} alt="icon" />
-              </Filter>
-              <Filter>
-                <img src={fileIcon} alt="icon" />
-                Filtrar por emisor
-                <img src={downIcon} alt="icon" />
-              </Filter>
-              <Filter>
-                <img src={calendarIcon} alt="icon" />
-                Filtrar por periodo
-                <img src={downIcon} alt="icon" />
-              </Filter>
+              <ButtonFilter text="Buscar" />
+              <ButtonFilter text="Filtrar por emisor" />
+              <ButtonFilter
+                text="Filtrar por periodo"
+                icon={<img src={calendarIcon} alt="icon" />}
+              />
             </div>
-            <FilterAll>
-              <span>
-                Descargar Reporte <img src={downloadIcon} alt="icon" />
-              </span>
-              <img src={downGrayIcon} alt="icon" />
-            </FilterAll>
+            <div>
+              <ButtonDownload title="Descargar reportes" />
+            </div>
           </Filters>
         </Header>
         <ReportsWrapper>
@@ -82,40 +70,6 @@ const Filters = styled.div`
     display: flex;
     align-items: center;
     gap: 16px;
-  }
-`;
-
-const Filter = styled.div`
-  display: flex;
-  align-items: center;
-  background-color: var(--neutral-100);
-  padding: 8px 16px;
-  gap: 12px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 14px;
-  & > img {
-    width: 12px;
-  }
-  & > span {
-    margin-right: 64px;
-  }
-`;
-
-const FilterAll = styled.div`
-  display: flex;
-  background-color: var(--neutral-100);
-  padding-right: 16px;
-  border-radius: 8px;
-  & > span {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 6px 18px;
-    color: #fff;
-    border-radius: 8px;
-    font-weight: 600;
-    background-color: var(--orange-300);
   }
 `;
 

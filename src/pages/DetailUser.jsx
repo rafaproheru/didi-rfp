@@ -4,6 +4,7 @@ import downGrayIcon from "../assets/down-black.svg";
 import downloadIcon from "../assets/download-white.svg";
 import { useNavigate } from "react-router-dom";
 import TableDetailUser from "../components/tables/TableDetailUser";
+import ButtonDownload from "../components/ButtonDownload";
 
 const DetailUser = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const DetailUser = () => {
               alt="icon"
               style={{ transform: "rotate(90deg)" }}
             />
-            <span>Regresar</span>
+            <span>Regresar a consultas</span>
           </SectionName>
         </Header>
         <UserInfo>
@@ -47,12 +48,7 @@ const DetailUser = () => {
         <TableWrapper>
           <HeaderTable>
             <h4>Certificados del contribuyente</h4>
-            <FilterAll>
-              <span>
-                Descargar Todos <img src={downloadIcon} alt="icon" />
-              </span>
-              <img src={downGrayIcon} alt="icon" />
-            </FilterAll>
+            <ButtonDownload />
           </HeaderTable>
           <TableDetailUser />
           <ByHeru>

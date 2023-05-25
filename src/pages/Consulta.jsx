@@ -1,11 +1,12 @@
 import { styled } from "styled-components";
 import Layout from "../components/Layout";
-import fileIcon from "../assets/file-black.svg";
 import downIcon from "../assets/down-black.svg";
 import downGrayIcon from "../assets/down-gray.svg";
 import downloadIcon from "../assets/download-white.svg";
 import searchIcon from "../assets/search.svg";
 import TableConsultant from "../components/tables/TableConsultant";
+import ButtonFilter from "../components/ButtonFilter";
+import ButtonDownload from "../components/ButtonDownload";
 
 const Consulta = () => {
   return (
@@ -17,23 +18,12 @@ const Consulta = () => {
           </SectionName>
           <Filters>
             <div>
-              <Filter>
-                <img src={fileIcon} alt="icon" />
-                Filtrar por emisor
-                <img src={downIcon} alt="icon" />
-              </Filter>
-              <Filter>
-                <img src={fileIcon} alt="icon" />
-                Filtrar por periodo
-                <img src={downIcon} alt="icon" />
-              </Filter>
+              <ButtonFilter text="Filtrar por emisor" />
+              <ButtonFilter text="Filtrar por periodo" />
             </div>
-            <FilterAll>
-              <span>
-                Descargar Todos <img src={downloadIcon} alt="icon" />
-              </span>
-              <img src={downGrayIcon} alt="icon" />
-            </FilterAll>
+            <div>
+              <ButtonDownload />
+            </div>
           </Filters>
         </Header>
         <TableWrapper>
