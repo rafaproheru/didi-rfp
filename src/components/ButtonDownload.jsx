@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import downloadIcon from "../assets/download-white.svg";
 import downGrayIcon from "../assets/down-gray.svg";
 
-const ButtonDownload = ({ title = "Descargar todos" }) => {
+const ButtonDownload = ({ title = "Descargar todos", options }) => {
   return (
     <Container>
       <FilterAll>
@@ -11,10 +11,19 @@ const ButtonDownload = ({ title = "Descargar todos" }) => {
         </span>
         <img src={downGrayIcon} alt="icon" />
       </FilterAll>
-      <Dropdown className="dropdown">
-        <li>Descargar categoría 1</li>
-        <li>Descargar categoría 2</li>
-      </Dropdown>
+      {!options && (
+        <Dropdown className="dropdown">
+          <li>Descargar categoría 1</li>
+          <li>Descargar categoría 2</li>
+        </Dropdown>
+      )}
+      {options && (
+        <Dropdown className="dropdown">
+          {options.map((option, index) => (
+            <li key={index}>{option}</li>
+          ))}
+        </Dropdown>
+      )}
     </Container>
   );
 };

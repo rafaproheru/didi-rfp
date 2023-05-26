@@ -18,8 +18,14 @@ const Consulta = () => {
           </SectionName>
           <Filters>
             <div>
-              <ButtonFilter text="Filtrar por emisor" />
-              <ButtonFilter text="Filtrar por periodo" />
+              <ButtonFilter
+                text="Filtrar por emisor"
+                options={[
+                  "Didi Mobility Information Technology",
+                  "Rebuilding Technology",
+                ]}
+              />
+              <ButtonFilter text="Filtrar por periodo" options={["Diciembre 2023", "Noviembre 2023"]}/>
             </div>
             <div>
               <ButtonDownload />

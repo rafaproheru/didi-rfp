@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import fileIcon from "../assets/file-black.svg";
 import downIcon from "../assets/down-black.svg";
 
-const ButtonFilter = ({ text, icon }) => {
+const ButtonFilter = ({ text, icon, options }) => {
   return (
     <Container>
       <Filter>
@@ -13,11 +13,23 @@ const ButtonFilter = ({ text, icon }) => {
 
         <img src={downIcon} alt="icon" />
       </Filter>
-      <Dropdown className="dropdown">
-        <li>Opción 1</li>
-        <li>Opción 2</li>
-        <li>Opción 3</li>
-      </Dropdown>
+      {!options && (
+        <Dropdown className="dropdown">
+          <li>Opción 1</li>
+          <li>Opción 2</li>
+          <li>Opción 3</li>
+        </Dropdown>
+      )}
+      {options && (
+        <Dropdown className="dropdown">
+          {options.map((option, index) => (
+            <>
+              <li key={index}>{option}</li>
+              <div className="divider" />
+            </>
+          ))}
+        </Dropdown>
+      )}
     </Container>
   );
 };
