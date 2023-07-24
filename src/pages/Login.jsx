@@ -31,7 +31,7 @@ const Login = () => {
               />
             </div>
             <div>
-              <input
+              <input type="password"
                 placeholder="Ingresa tu contraseña"
               />
               <img src={eyeIcon} alt="eye" />
